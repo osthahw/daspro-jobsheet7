@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class siakadfor24 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        int lulus=0,tidakLulus=0;
         double nilai,tertinggi = 0,terendah = 100;
 
-        for (int i = 1; i <= 10;i++) {
+        for (int i = 1; i <= 12;i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + i + ": ");
             nilai = sc.nextDouble();
             if (nilai > tertinggi) {
@@ -15,8 +15,15 @@ public class siakadfor24 {
             if (nilai < terendah) {
                 terendah = nilai;
             }
+            if (nilai >=57) {
+                lulus++;
+            }else{
+                tidakLulus++;
+            }
         }
         System.out.println("Nilai tertinggi: " + tertinggi);
-        System.out.println("Nilai terendah: " + terendah);  
+        System.out.println("Nilai terendah: " + terendah); 
+        System.out.println("Jumlah mahasiswa lulus: " + lulus); 
+        System.out.println("Jumlah mahasiswa tidak lulus: " + tidakLulus);
     }    
 }
